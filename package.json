@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "jest": "^27.4.7"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "A command line app that allows you to enter employee information and have it generated to an web-page for easy access",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/favro03/team-profile-generator.git"
+  },
+  "author": "Tracy Favro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/favro03/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/favro03/team-profile-generator#readme"
+}
