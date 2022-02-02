@@ -186,6 +186,67 @@ const addEmployee = () =>{
                 }
             }
         },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is the Interns ID?',
+            when: ({ role }) =>{
+                if(role === "Intern"){
+                    return true;
+                } else{
+                    return false;
+                }
+            },
+            validate: idInput => {
+                if (idInput){
+                    return true;
+                } else {
+                    console.log('Please enter the Intern ID!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is the Interns Email?',
+            when: ({ role }) =>{
+                if(role === "Intern"){
+                    return true;
+                } else{
+                    return false;
+                }
+            },
+            validate: emailInput => {
+                if (emailInput){
+                    return true;
+                } else {
+                    console.log('Please enter the Intern email!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'What is the Interns school?',
+            when: ({ role }) =>{
+                if(role === "Intern"){
+                    return true;
+                } else{
+                    return false;
+                }
+            },
+            validate: gitInput => {
+                if (gitInput){
+                    return true;
+                } else {
+                    console.log('Please enter the Interns school!');
+                    return false;
+                }
+            }
+        },
+
 
     ]);
 };
