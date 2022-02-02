@@ -71,12 +71,124 @@ const addManager = () =>{
 
         teamArr.push(manager);
         console.log(manager);
-    })
+    });
 };
-addManager();
-/*{
+const addEmployee = () =>{
+    console.log(`
+    ==================== 
+     Add a New Employee
+    ====================
+    `);
+    return inquirer.prompt([
+        {
             type: 'list',
             name:'role',
             message: 'Do you have anymore employees to add?',
             choices: ['Engineer', 'Intern', 'Finish Building Team'],
-        }*/
+        },
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the Engineers Name?',
+            when: ({ role }) =>{
+                if(role === "Engineer"){
+                    return true;
+                } else{
+                    return false;
+                }
+            },
+            validate: nameInput => {
+                if (nameInput){
+                    return true;
+                } else {
+                    console.log('Please enter the Engineers name!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is the Engineers ID?',
+            when: ({ role }) =>{
+                if(role === "Engineer"){
+                    return true;
+                } else{
+                    return false;
+                }
+            },
+            validate: idInput => {
+                if (idInput){
+                    return true;
+                } else {
+                    console.log('Please enter the Engineers ID!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is the Engineers Email?',
+            when: ({ role }) =>{
+                if(role === "Engineer"){
+                    return true;
+                } else{
+                    return false;
+                }
+            },
+            validate: emailInput => {
+                if (emailInput){
+                    return true;
+                } else {
+                    console.log('Please enter the Engineers email!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'gitHub',
+            message: 'What is the Engineers GitHub user name?',
+            when: ({ role }) =>{
+                if(role === "Engineer"){
+                    return true;
+                } else{
+                    return false;
+                }
+            },
+            validate: gitInput => {
+                if (gitInput){
+                    return true;
+                } else {
+                    console.log('Please enter the Engineers GitHub user name!');
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the Intern Name?',
+            when: ({ role }) =>{
+                if(role === "Intern"){
+                    return true;
+                } else{
+                    return false;
+                }
+            },
+            validate: nameInput => {
+                if (nameInput){
+                    return true;
+                } else {
+                    console.log('Please enter the Interns name!');
+                    return false;
+                }
+            }
+        },
+
+    ]);
+};
+//addManager();
+addEmployee();
+        
