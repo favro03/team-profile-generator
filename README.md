@@ -1,8 +1,4 @@
-
-
-![MIT License](/assets/images/MITBadge.png)
-      
-
+    
 # Team Profile Generator
 
 ## Description
